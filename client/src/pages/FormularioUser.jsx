@@ -15,7 +15,7 @@ export default class FormularioUser extends Component {
     }
 
     async getPasesData() {
-        axios.get('http://localhost:5000/api/pases')
+        axios.get('http://23.20.72.4:5000/api/pases')
             .then((response) => {
                 this.setState({ pases: response.data })
             })
@@ -23,7 +23,7 @@ export default class FormularioUser extends Component {
 
     insertUser = () => {
         const { nombre, fecha_compra, pase} = this.state
-        axios.post('http://localhost:5000/api/usuarios', {
+        axios.post('http://23.20.72.4:5000/api/usuarios', {
             nombre,
             fecha_compra,
             pase,

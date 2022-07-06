@@ -12,7 +12,7 @@ export default class ListUsuarios extends Component {
     }
 
     async getUsuariosData() {
-        axios.get('http://localhost:5000/api/usuarios')
+        axios.get('http://23.20.72.4:5000/api/usuarios')
             .then((response) => {
                 this.setState({ usuarios: response.data })
             })

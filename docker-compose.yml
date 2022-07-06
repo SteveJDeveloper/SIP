@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.3'
 
 services:
   db:
@@ -10,18 +10,12 @@ services:
       - db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: db_sip
   apisip:
     depends_on:
       - db
     image: node-apisip
     ports:
-      - 5000:5000
-    environment:
-      MYSQL_DATABASE: db_sip
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_HOST: db
+      - 2000:2000
   websip:
     restart: always
     image: node-websip
@@ -31,7 +25,7 @@ services:
     image: phpmyadmin
     restart: always
     ports: 
-      - "8080:8080"
+      - "8080:80"
     environment: 
       PMA_HOST: db:3306
       MYSQL_ROOT_PASSWORD: root
