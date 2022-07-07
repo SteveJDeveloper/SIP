@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 /**Testing */
-app.listen(5000,"localhost", () => {
+app.listen(5000,"0.0.0.0", () => {
     console.log('Funcionando')
 })
 
