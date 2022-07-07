@@ -11,7 +11,7 @@ const { compare } = require('bcryptjs');
 
 //Connexion a la base de datos
 const db = mysql.createPool({
-    host: 'localhost',
+    host: process.env.MYSQL_HOST || 'localhost',
     user: 'root',
     password: 'root',
     database: 'db_sip'
