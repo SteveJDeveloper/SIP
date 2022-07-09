@@ -12,7 +12,7 @@ export default class ListPases extends Component {
     }
 
     async getPasesData() {
-        axios.get('http://23.20.72.4:5000/api/pases')
+        axios.get('http://54.164.224.159:5000/api/pases')
             .then((response) => {
                 this.setState({ pases: response.data })
             })

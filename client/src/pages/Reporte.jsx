@@ -18,7 +18,7 @@ export default class Reporte extends Component {
         const { desde, hasta }  = this.state
         var cadenas = hasta.split('/')
         var aux = cadenas[2]+'-'+cadenas[1]+'-'+cadenas[0]
-        axios.get('http://23.20.72.4:5000/api/reporte/'+desde+'/'+aux)
+        axios.get('http://54.164.224.159:5000/api/reporte/'+desde+'/'+aux)
             .then((response) => {
                 var today = new Date().getTime()
                 var data = []

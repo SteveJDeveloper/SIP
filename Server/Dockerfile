@@ -2,7 +2,7 @@
 FROM node:16
 
 #Definir directorio de trabajo
-WORKDIR /app/api_sip
+WORKDIR /app/apisip
 
 #Copia de los packaje al directorio de trabajo 
 #para desacargar dependencias

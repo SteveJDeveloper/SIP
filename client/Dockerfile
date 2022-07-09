@@ -2,7 +2,7 @@
 FROM node:16
 
 #Definir directorio de trabajo
-WORKDIR /app/proyecto_final
+WORKDIR /app/websip
 
 #Copia de los packaje al directorio de trabajo 
 #para desacargar dependencias
